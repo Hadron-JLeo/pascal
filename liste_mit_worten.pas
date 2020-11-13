@@ -12,18 +12,7 @@ tIndexListe= record
 //
 // #################################
 
-// Initialising variables -------
-var
-    knoten_einsetzen: tRefIndexListe;
-    //
-    gegebene_liste, reset_liste, nach_knoten: tRefIndexListe;
-    //
-    // Knoten Nach dem Knoten der einzusetzen ist
-    // 
-    cur_index: integer; // Index wo wir gerade drauf sind
-    //
-    check_1, check_2, check_done, repeating_index: boolean;
-// ##############################
+
 
 // ##### PROCEDURE "ADD" DECLARATION ##### //
 //
@@ -33,6 +22,20 @@ procedure add(var ioListe:tRefIndexListe; inIndex:integer; inWert:String);
         the indexes of the already existing node must be incremented,
         the same should be done for every non-unique (repeating) index.
     }
+    
+
+    // Initialising variables -------
+    var
+        knoten_einsetzen: tRefIndexListe;
+        //
+        gegebene_liste, reset_liste, nach_knoten: tRefIndexListe;
+        //
+        // Knoten Nach dem Knoten der einzusetzen ist
+        // 
+        cur_index: integer; // Index wo wir gerade drauf sind
+        //
+        check_1, check_2, check_done, repeating_index: boolean;
+    // ##############################
 
     begin
         gegebene_liste:= ioListe; // Die Liste wo wir Sachen veraendern werden
